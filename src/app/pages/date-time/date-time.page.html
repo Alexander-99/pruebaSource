@@ -1,0 +1,19 @@
+<app-header titulo="DateTime"></app-header>
+
+<ion-content>
+  <ion-list>
+    <ion-list-header>
+      <ion-label>Datos de nacimiento</ion-label>
+    </ion-list-header>
+</ion-list>
+<ion-item>
+  <ion-label>Pick date</ion-label>
+  <ion-datetime
+    displayFormat="DD.MM.YYYY"
+    presentation="date"
+    [(ngModel)]="date"
+    [value]="fechaNaci.toISOString()"
+    (ionChange)="cambioFecha($event)"
+  ></ion-datetime>
+</ion-item>
+</ion-content>
